@@ -429,9 +429,56 @@
       </item>
     </items>
   </list>
+  <list code="yn" hierarchical="0" system="1" vocabulary="0" defaultSort="1">
+    <labels>
+      <label locale="en_US">
+        <name>Yes/No</name>
+      </label>
+    </labels>
+    <items>
+      <item idno="yes" enabled="1" default="0" value="yes" rank="1" type="concept">
+        <labels>
+          <label locale="en_US" preferred="1">
+            <name_singular>Yes</name_singular>
+            <name_plural>Yes</name_plural>
+            <description/>
+          </label>
+        </labels>
+      </item>
+      <item idno="no" enabled="1" default="1" value="no" rank="2" type="concept">
+        <labels>
+          <label locale="en_US" preferred="1">
+            <name_singular>No</name_singular>
+            <name_plural>No</name_plural>
+            <description/>
+          </label>
+        </labels>
+      </item>
+    </items>
+  </list>
 </lists>
   <elementSets>
     <!--Common Elements-->
+    <metadataElement code="credit_line" datatype="Text">
+      <labels>
+        <label locale="en_US">
+          <name>Credit Line</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">110</setting>
+      </settings>
+      <typeRestrictions>
+      <restriction>
+        <table>ca_object_representations</table>
+        <settings>
+          <setting name="minAttributesPerRow">0</setting>
+          <setting name="maxAttributesPerRow">1</setting>
+          <setting name="minimumAttributeBundlesToDisplay">1</setting>
+        </settings>
+      </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <metadataElement code="media" datatype="Container">
       <labels>
         <label locale="en_US">
@@ -441,6 +488,7 @@
       <settings>
         <setting name="fieldWidth">50</setting>
         <setting name="fieldHeight">1</setting>
+        <setting name="minimumAttributeBundlesToDisplay">1</setting>
       </settings>
       <elements>
       <metadataElement code="media_line1" datatype="Container">
@@ -460,25 +508,20 @@
               <setting name="fieldWidth">40</setting>
             </settings>
           </metadataElement>
+          <metadataElement code="media_primary" datatype="List" list="yn">
+            <labels>
+              <label locale="en_US">
+                <name>Primary?</name>
+              </label>
+            </labels>
+            <settings>
+              <setting name="render">yes_no_checkboxes</setting>
+              <setting name="fieldWidth">40</setting>
+            </settings>
+          </metadataElement>
         </elements>
-      </metadataElement> 
+      </metadataElement>
         <metadataElement code="media_line2" datatype="Container">
-          <labels>
-            <label locale="en_US">
-              <name>media Line 2</name>
-            </label>
-          </labels>
-          <elements>
-            <metadataElement code="media_media" datatype="Media">
-              <labels>
-                <label locale="en_US">
-                  <name>Media</name>
-                </label>
-              </labels>
-            </metadataElement>
-          </elements>
-        </metadataElement>
-        <metadataElement code="media_line3" datatype="Container">
           <labels>
             <label locale="en_US">
               <name>media Line 3</name>
@@ -489,6 +532,25 @@
               <labels>
                 <label locale="en_US">
                   <name>Credit Line</name>
+                </label>
+              </labels>
+              <settings>
+                <setting name="fieldWidth">110</setting>
+              </settings>
+            </metadataElement>
+          </elements>
+        </metadataElement> 
+        <metadataElement code="media_line3" datatype="Container">
+          <labels>
+            <label locale="en_US">
+              <name>media Line 2</name>
+            </label>
+          </labels>
+          <elements>
+            <metadataElement code="media_media" datatype="Media">
+              <labels>
+                <label locale="en_US">
+                  <name>Media</name>
                 </label>
               </labels>
             </metadataElement>
@@ -946,7 +1008,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">110</setting>
+        <setting name="fieldWidth">80</setting>
         <setting name="fieldHeight">1</setting>
       </settings>
       <typeRestrictions>
@@ -967,7 +1029,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">110</setting>
+        <setting name="fieldWidth">80</setting>
         <setting name="fieldHeight">1</setting>
       </settings>
       <typeRestrictions>
@@ -988,7 +1050,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">110</setting>
+        <setting name="fieldWidth">80</setting>
         <setting name="fieldHeight">1</setting>
       </settings>
       <typeRestrictions>
@@ -1853,7 +1915,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">110</setting>
+        <setting name="fieldWidth">80</setting>
         <setting name="fieldHeight">1</setting>
       </settings>
       <typeRestrictions>
@@ -1895,7 +1957,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">110</setting>
+        <setting name="fieldWidth">80</setting>
         <setting name="fieldHeight">1</setting>
       </settings>
       <typeRestrictions>
@@ -1933,7 +1995,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">110</setting>
+        <setting name="fieldWidth">80</setting>
         <setting name="fieldHeight">1</setting>
       </settings>
       <typeRestrictions>
@@ -1954,7 +2016,7 @@
         </label>
       </labels>
       <settings>
-        <setting name="fieldWidth">110</setting>
+        <setting name="fieldWidth">80</setting>
         <setting name="fieldHeight">1</setting>
       </settings>
       <typeRestrictions>
@@ -2435,6 +2497,48 @@
       </typeRestrictions>
     </metadataElement>-->
     <!--Movement - Objects Interstitial Elements-->
+    <metadataElement code="AcqObjJoin_ID" datatype="Text">
+      <labels>
+        <label locale="en_US">
+          <name>Identifier</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">100</setting>
+        <setting name="fieldHeight">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_movements_x_objects</table>
+          <includeSubtypes>1</includeSubtypes>
+          <settings>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="AcqObjJoin_TitleDescription" datatype="Text">
+      <labels>
+        <label locale="en_US">
+          <name>Description</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">100</setting>
+        <setting name="fieldHeight">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r1">
+          <table>ca_movements_x_objects</table>
+          <includeSubtypes>1</includeSubtypes>
+          <settings>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <metadataElement code="AcqObjJoin_Attribution" datatype="Text">
       <labels>
         <label locale="en_US">
@@ -2894,6 +2998,10 @@
           <bundlePlacements>
             <placement code="ca_attribute_media">
               <bundle>ca_attribute_media</bundle>
+              <settings>
+              <setting name="sort"><![CDATA[media_media_primary]]></setting>
+                <setting name="sortDirection">DESC</setting>
+            </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -2911,17 +3019,16 @@
                 <setting name="label" locale="en_US">Related Acquisitions</setting>
                 <setting name="list_format">list</setting>
                 <setting name="display_template"><![CDATA[<unit relativeTo="ca_movements"> <l>^ca_movements.idno</l> ^ca_movements.preferred_labels
-		<ifcount code="ca_entities" min="1"><unit relativeTo="ca_entities"><br>Seller: ^ca_entities.preferred_labels.displayname</unit></ifcount> </unit><br>
-Identifier: ^ca_movements_x_objects.idno 
-Description: ^ca_movements_x_objects.preferred_labels
-Type: ^ca_movements_x_objects.AcqObjJoin_Type 
+		<ifcount code="ca_entities" min="1"><unit relativeTo="ca_entities"><br>Seller: <l>^ca_entities.preferred_labels.displayname</l></unit></ifcount> </unit><br>
+Identifier: ^ca_movements_x_objects.AcqObjJoin_TitleDescription <br>
+                 Description: ^ca_movements_x_objects.AcqObjJoin_ID<br>
+Type: ^ca_movements_x_objects.AcqObjJoin_Type <br>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_Attribution"> <br>Attribution History: ^ca_movements_x_objects.AcqObjJoin_Attribution </ifdef>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_PriceUSD"> <br>Purchase Amount: ^ca_movements_x_objects.AcqObjJoin_PriceUSD </ifdef>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_CreditUSD"> <br> Credit Amount: ^ca_movements_x_objects.AcqObjJoin_CreditUSD </ifdef>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_ReturnUSD"> <br> Return Amount: ^ca_movements_x_objects.AcqObjJoin_ReturnUSD</ifdef>
-<ifdef code= "ca_movements_x_objects.AcqObjJoin_InternalNote"> <br> Note: ^ca_movements_x_objects.AcqObjJoin_InternalNote</ifdef>>
-
-	]]></setting>
+<ifdef code= "ca_movements_x_objects.AcqObjJoin_InternalNote"> <br> Note: ^ca_movements_x_objects.AcqObjJoin_InternalNote</ifdef>
+]]></setting>
                 <setting name="minRelationshipsPerRow"/>
                 <setting name="showCurrentOnly">0</setting>
                 <setting name="disableQuickadd">1</setting>
@@ -2962,6 +3069,8 @@ Type: ^ca_movements_x_objects.AcqObjJoin_Type
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Art Objects</setting>
                 <setting name="list_format">list</setting>
+                 <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
+                <setting name="sortDirection">ASC</setting>
               </settings>
             </placement>
             <placement code="ca_attribute_Object_NGARelatedTMSID">
@@ -3203,6 +3312,8 @@ Type: ^ca_movements_x_objects.AcqObjJoin_Type
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Art Objects</setting>
                 <setting name="list_format">list</setting>
+                <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
+                <setting name="sortDirection">ASC</setting>
               </settings>
             </placement>
           </bundlePlacements>
@@ -3297,11 +3408,17 @@ Type: ^ca_movements_x_objects.AcqObjJoin_Type
                 <setting name="label" locale="en_US">Related Art Objects</setting>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="list_format">list</setting>
+                 <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
                 <setting name="sortDirection">ASC</setting>
-                <setting name="display_template"> <![CDATA[  ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber</l> <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> ^ca_entities.preferred_labels.displayname</unit><br>^ca_objects.preferred_labels <br>
-                  <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit>
-                  Attribution History: ^ca_movements_x_objects.attribution_history 
-Type: ^ca_movements_x_objects.AcqObjJoin_Type 
+                <setting name="display_template"> <![CDATA[ <unit relativeTo="ca_objects"> 
+
+
+   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber   <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>, <I>^ca_objects.preferred_labels</I>, 
+                  <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit></unit>      <br>
+                 
+                 Identifier: ^ca_movements_x_objects.AcqObjJoin_TitleDescription<br>
+                 Description: ^ca_movements_x_objects.AcqObjJoin_ID<br>
+                 Type: ^ca_movements_x_objects.AcqObjJoin_Type <br>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_Attribution"> <br>Attribution History: ^ca_movements_x_objects.AcqObjJoin_Attribution </ifdef>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_PriceUSD"> <br>Purchase Amount: ^ca_movements_x_objects.AcqObjJoin_PriceUSD </ifdef>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_CreditUSD"> <br> Credit Amount: ^ca_movements_x_objects.AcqObjJoin_CreditUSD </ifdef>
@@ -3394,6 +3511,8 @@ Type: ^ca_movements_x_objects.AcqObjJoin_Type
                 <setting name="label" locale="en_US">Related Art Objects</setting>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="list_format">list</setting>
+                 <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
+                <setting name="sortDirection">ASC</setting>
               </settings>
             </placement>
           </bundlePlacements>
@@ -3619,8 +3738,14 @@ Type: ^ca_movements_x_objects.AcqObjJoin_Type
           <bundle>ca_objects.idno</bundle>
           <settings>
             <setting name="label" locale="en_US">ID#</setting>
+            <setting name="format"><![CDATA[^ca_objects.idno <br>
+            ^ca_objects.Object_KressCatalogNumber]]></setting>
           </settings>
-        </placement>        
+        </placement>
+        <placement code="ca_object_representations">
+          <bundle>ca_objects.media.media_media</bundle>
+          <settings><setting name="format"><![CDATA[^ca_object_representations.media.icon]]></setting></settings>
+        </placement>
         <placement code="preferred_labels">
           <bundle>ca_objects.preferred_labels</bundle>
           <settings>
@@ -3632,7 +3757,7 @@ Type: ^ca_movements_x_objects.AcqObjJoin_Type
           <settings>
             <setting name="label" locale="en_US">Artist</setting>
             <setting name="restrict_to_relationship_types">artist</setting>
-            <setting name="format"><![CDATA[]]></setting>
+            <setting name="delimiter"><![CDATA[<br>]]></setting>
           </settings>
         </placement>      
         <placement code="Object_DateExpression">
