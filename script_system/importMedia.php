@@ -21,12 +21,19 @@
 				$f = $d['media_filename'];
 				$fproc = _stripName($f);
 				if ($p = $file_map[$fproc]) {
+					if (ca_object_representations::mediaExists($p)) { continue; }
 					print "[$attr_id] IMPORT $p\n";
 					$o = $qr->getInstance();
+					$t_rep = $o->addRepresentation($p, 'front', 1, 0, 1, true, [], ['original_filename' => pathInfo($p, PATHINFO_FILENAME), 'returnRepresentation' => true]);
 					
-					$o->editAttribute($attr_id, 'media', array_merge($d, ['media_media' => $p]), null, ['original_filename' => $f]);
-					$o->update();
 					DataMigrationUtils::postError($o, "While adding $p");
+					$t_rep->addAttribute(['credit_line' => $d['media_credit_line']], 'credit_line');
+					$t_rep->update();
+					DataMigrationUtils::postError($o, "While setting credit line for ".$d['media_credit_line']);
+					
+					// $o->editAttribute($attr_id, 'media', array_merge($d, ['media_media' => $p]), null, ['original_filename' => $f]);
+// 					$o->update();
+// 					DataMigrationUtils::postError($o, "While adding $p");
 				} else {
  					$log->logError("[NO MATCH FOR {$idno}] {$f}");
  				}
