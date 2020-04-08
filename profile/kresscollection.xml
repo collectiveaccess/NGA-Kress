@@ -825,7 +825,7 @@
         <setting name="fieldWidth">110</setting>
         <setting name="fieldHeight">20</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">6000</setting>
+        <setting name="maxChars">10000</setting>
       </settings>
       <typeRestrictions>
         <restriction code="r1">
@@ -935,7 +935,7 @@
     <metadataElement code="Object_DreyfusNumber" datatype="Text">
       <labels>
         <label locale="en_US">
-          <name>Dreyfuss Number</name>
+          <name>Dreyfus Number</name>
         </label>
       </labels>
       <settings>
@@ -1025,7 +1025,7 @@
     <metadataElement code="Object_URLNGALibraryImageURL" datatype="Url">
       <labels>
         <label locale="en_US">
-          <name>Related National Gallery of Art Library</name>
+          <name>Related National Gallery of Art Library Image Collection Record</name>
         </label>
       </labels>
       <settings>
@@ -1091,7 +1091,7 @@
     <metadataElement code="Object_NGATMSAccession" datatype="Text">
       <labels>
         <label locale="en_US">
-          <name>NGATMS Accession</name>
+          <name>NGA TMS Accession</name>
         </label>
       </labels>
       <settings>
@@ -1116,7 +1116,7 @@
     <metadataElement code="Object_NGATMSID" datatype="Text">
       <labels>
         <label locale="en_US">
-          <name>NGATMS ID</name>
+          <name>NGA TMS ID</name>
         </label>
       </labels>
       <settings>
@@ -1196,405 +1196,17 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <!-- replace with media? 
-    <metadataElement code="Object_ImageCreditLine" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Image Credit</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">60</setting>
-        <setting name="fieldHeight">2</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">1000</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <type>art_objects</type>
-          <includeSubtypes>1</includeSubtypes>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">5</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r2">
-          <table>ca_occurrences</table>
-          <type>acquisition</type>
-          <settings>
-            <setting name="maxAttributesPerRow">5</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-            <setting name="minAttributesPerRow">0</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="Object_ImageFilename" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>File Attachment</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">60</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">120</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r2">
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>-->
-    <!-- ??????? -->
-    <metadataElement code="DATE" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Date</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r2">
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r3">
-          <table>ca_loans</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r4">
-          <table>ca_movements</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="address" datatype="Container">
-      <labels>
-        <label locale="en_US">
-          <name>Location</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="doesNotTakeLocale">1</setting>
-      </settings>
-      <elements>
-        <metadataElement code="line1" datatype="Container">
-          <labels>
-            <label locale="en_US">
-              <name>Address line 1</name>
-            </label>
-          </labels>
-          <settings/>
-          <elements>
-            <metadataElement code="address1" datatype="Text">
-              <labels>
-                <label locale="en_US">
-                  <name>Address line 1</name>
-                </label>
-              </labels>
-              <settings>
-                <setting name="fieldWidth">70</setting>
-                <setting name="fieldHeight">1</setting>
-                <setting name="maxChars">255</setting>
-              </settings>
-            </metadataElement>
-          </elements>
-        </metadataElement>
-        <metadataElement code="line2" datatype="Container">
-          <labels>
-            <label locale="en_US">
-              <name>Address line 1</name>
-            </label>
-          </labels>
-          <settings/>
-          <elements>
-            <metadataElement code="address2" datatype="Text">
-              <labels>
-                <label locale="en_US">
-                  <name>Address line 2</name>
-                </label>
-              </labels>
-              <settings>
-                <setting name="fieldWidth">70</setting>
-                <setting name="fieldHeight">1</setting>
-                <setting name="maxChars">255</setting>
-              </settings>
-            </metadataElement>
-          </elements>
-        </metadataElement>
-        <metadataElement code="line3" datatype="Container">
-          <labels>
-            <label locale="en_US">
-              <name>Address line 3</name>
-            </label>
-          </labels>
-          <settings/>
-          <elements>
-            <metadataElement code="city" datatype="Text">
-              <labels>
-                <label locale="en_US">
-                  <name>City</name>
-                </label>
-              </labels>
-              <settings>
-                <setting name="fieldWidth">20</setting>
-                <setting name="fieldHeight">1</setting>
-                <setting name="maxChars">255</setting>
-              </settings>
-            </metadataElement>
-            <metadataElement code="stateprovince" datatype="Text">
-              <labels>
-                <label locale="en_US">
-                  <name>State/province</name>
-                </label>
-              </labels>
-              <settings>
-                <setting name="fieldWidth">15</setting>
-                <setting name="fieldHeight">1</setting>
-                <setting name="maxChars">255</setting>
-              </settings>
-            </metadataElement>
-            <metadataElement code="country" datatype="Text">
-              <labels>
-                <label locale="en_US">
-                  <name>Country</name>
-                </label>
-              </labels>
-              <settings>
-                <setting name="fieldWidth">15</setting>
-                <setting name="fieldHeight">1</setting>
-                <setting name="maxChars">255</setting>
-              </settings>
-            </metadataElement>
-          </elements>
-        </metadataElement>
-      </elements>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_entities</table>      
-          <settings>
-            <setting name="maxAttributesPerRow">5</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
     
-    <metadataElement code="location_filter" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Location (filter)</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="suggestExistingValues">1</setting>
-        <setting name="fieldWidth">40</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">1000</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r2">
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="note" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Note</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">110</setting>
-        <setting name="fieldHeight">3</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">1000</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r2">
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">5</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="internal_note" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Internal Note</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">110</setting>
-        <setting name="fieldHeight">3</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r2">
-          <table>ca_entities</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">5</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement> 
-    <metadataElement code="catalog_no_sort" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Catalog Number Sort</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">40</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">120</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <type>art_object</type>
-          <includeSubtypes>1</includeSubtypes>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">5</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="citation" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Citation</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">2</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">1000</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="citation_note" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Citation Note</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">70</setting>
-        <setting name="fieldHeight">2</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">1000</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_objects</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r2">
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
+    
+    
+    
+    
+    
+    
+     
+    
+    
+    
     <!--Entity Elements-->
     <metadataElement code="Name_BirthDateFilter" datatype="DateRange">
           <labels>
@@ -2202,29 +1814,7 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <!-- Replace with Media field?
-    <metadataElement code="Doc_DocumentFilename" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>File Name</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">110</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">65535</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_occurrences</table>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement> -->
+    
     <!--Movement (acquisition) Elements-->
     <metadataElement code="Acquisition_Date" datatype="Text">
       <labels>
@@ -2452,55 +2042,12 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    <!-- Replace with Media field?
-    <metadataElement code="Acquisition_DocumentFilename" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>File Attachment</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">60</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">120</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction>
-          <table>ca_movements</table>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>-->
+    
     <!--Movement - Objects Interstitial Elements-->
     <metadataElement code="AcqObjJoin_ID" datatype="Text">
       <labels>
         <label locale="en_US">
           <name>Identifier</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">100</setting>
-        <setting name="fieldHeight">1</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_movements_x_objects</table>
-          <includeSubtypes>1</includeSubtypes>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="AcqObjJoin_TitleDescription" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Description</name>
         </label>
       </labels>
       <settings>
@@ -2645,54 +2192,6 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
-    
-    <!-- ?????
-    <metadataElement code="AcqObjJoin_ImageCreditLine" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>Image Credit Line</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">60</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">120</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_movements_x_objects</table>
-          <includeSubtypes>1</includeSubtypes>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>
-    <metadataElement code="AcqObjJoin_ImageFilename" datatype="Text">
-      <labels>
-        <label locale="en_US">
-          <name>File Name</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="fieldWidth">60</setting>
-        <setting name="fieldHeight">1</setting>
-        <setting name="minChars">0</setting>
-        <setting name="maxChars">120</setting>
-      </settings>
-      <typeRestrictions>
-        <restriction code="r1">
-          <table>ca_movements_x_objects</table>
-          <includeSubtypes>1</includeSubtypes>
-          <settings>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-      </typeRestrictions>
-    </metadataElement>-->
     <!--Loan Elements-->
     <metadataElement code="Distribution_OfferDate" datatype="DateRange">
       <labels>
@@ -2846,13 +2345,10 @@
             <placement code="ca_attribute_Object_KressCatalogNumber">
               <bundle>ca_attribute_Object_KressCatalogNumber</bundle>
             </placement>
-            <placement code="ca_attribute_Object_CatalogNumberSort">
-              <bundle>ca_attribute_Object_CatalogNumberSort</bundle>
-            </placement>
             <placement code="ca_attribute_Object_Classification">
               <bundle>ca_attribute_Object_Classification</bundle>
             </placement>
-            <placement code="ca_entities">
+            <placement code="ca_entities_artist">
               <bundle>ca_entities</bundle>
               <settings>
                 <setting name="display_template"><![CDATA[]]></setting>
@@ -2861,6 +2357,19 @@
                 <setting name="restrict_to_relationship_types">artist</setting>
                 <setting name="restrict_to_types">artist</setting>
                 <setting name="add_label" locale="en_US">Add artist</setting>
+                 <setting name="expand_collapse_value">expand</setting>
+                <setting name="expand_collapse_no_value">expand</setting>
+              </settings>
+            </placement>
+            <placement code="ca_entities_attribution">
+              <bundle>ca_entities</bundle>
+              <settings>
+                <setting name="display_template"><![CDATA[]]></setting>
+                <setting name="list_format">list</setting>
+                <setting name="label" locale="en_US">Attribution</setting>
+                <setting name="restrict_to_relationship_types">attribution</setting>
+                <setting name="restrict_to_types">artist</setting>
+                <setting name="add_label" locale="en_US">Add attribution</setting>
                  <setting name="expand_collapse_value">expand</setting>
                 <setting name="expand_collapse_no_value">expand</setting>
               </settings>
@@ -2896,6 +2405,7 @@
                 <setting name="display_template"><![CDATA[]]></setting>
                 <setting name="list_format">list</setting>
                 <setting name="label" locale="en_US">Location</setting>
+                <setting name="add_label" locale="en_US">Add location</setting>
                 <setting name="restrict_to_relationship_types">location</setting>
               </settings>
             </placement>
@@ -2920,6 +2430,9 @@
             </label>
           </labels>
           <bundlePlacements>
+            <placement code="ca_attribute_Object_CatalogNumberSort">
+              <bundle>ca_attribute_Object_CatalogNumberSort</bundle>
+            </placement>
             <placement code="ca_attribute_Object_CurrentAccNo">
               <bundle>ca_attribute_Object_CurrentAccNo</bundle>
             </placement>
@@ -2970,25 +2483,6 @@
             </placement>
           </bundlePlacements>
         </screen>
-        <screen idno="media" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Media</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="ca_object_representations">
-              <bundle>ca_object_representations</bundle>
-              <settings>
-              <setting name="sort"><![CDATA[]]></setting>
-                <setting name="sortDirection">DESC</setting>
-            </settings>
-            </placement>
-            <placement code="ca_attribute_credit_line">
-              <bundle>ca_attribute_credit_line</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
         <screen idno="related_records" default="0">
           <labels>
             <label locale="en_US">
@@ -3001,11 +2495,11 @@
               <settings>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Acquisitions</setting>
+                <setting name="add_label" locale="en_US">Add acquisition</setting>
                 <setting name="list_format">list</setting>
                 <setting name="display_template"><![CDATA[<unit relativeTo="ca_movements"> <l>^ca_movements.idno</l> ^ca_movements.preferred_labels
 		<ifcount code="ca_entities" min="1"><unit relativeTo="ca_entities"><br>Seller: <l>^ca_entities.preferred_labels.displayname</l></unit></ifcount> </unit><br>
                  Identifier: ^ca_movements_x_objects.AcqObjJoin_ID<br>
-                 Description: ^ca_movements_x_objects.AcqObjJoin_TitleDescription<br>
                  Type: ^ca_movements_x_objects.AcqObjJoin_Type <br>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_Attribution">Attribution History: ^ca_movements_x_objects.AcqObjJoin_Attribution </ifdef>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_PriceUSD"> <br>Purchase Amount: ^ca_movements_x_objects.AcqObjJoin_PriceUSD </ifdef>
@@ -3025,6 +2519,7 @@
                 <setting name="disableQuickadd">1</setting>
                  <setting name="list_format">list</setting>
                 <setting name="label" locale="en_US">Related Distributions</setting>
+                <setting name="add_label" locale="en_US">Add distribution</setting>
                 <setting name="display_template"><![CDATA[<l>^ca_loans.idno</l> ^ca_loans.preferred_labels]]></setting>
               </settings>
             </placement>
@@ -3052,6 +2547,7 @@
               <settings>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Art Objects</setting>
+                <setting name="add_label" locale="en_US">Add art object</setting>
                 <setting name="list_format">list</setting>
                  <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
                 <setting name="sortDirection">ASC</setting>
@@ -3059,6 +2555,23 @@
             </placement>
             <placement code="ca_attribute_Object_NGARelatedTMSID">
               <bundle>ca_attribute_Object_NGARelatedTMSID</bundle>
+            </placement>
+          </bundlePlacements>
+        </screen>
+        <screen idno="media" default="0">
+          <labels>
+            <label locale="en_US">
+              <name>Media</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="ca_object_representations">
+              <bundle>ca_object_representations</bundle>
+              <settings>
+              <setting name="sort"><![CDATA[]]></setting>
+                <setting name="sortDirection">DESC</setting>
+                <setting name="display_template"><![CDATA[^ca_object_representations.credit_line]]></setting>
+            </settings>
             </placement>
           </bundlePlacements>
         </screen>       
@@ -3094,6 +2607,7 @@
               <bundle>nonpreferred_labels</bundle>
               <settings>
                 <setting name="label" locale="en_US">Alternate names</setting>
+                <setting name="add_label" locale="en_US">Add alternate name</setting>
                  <setting name="expand_collapse_value">expand</setting>
                 <setting name="expand_collapse_no_value">collapse</setting>
               </settings>
@@ -3148,8 +2662,9 @@
               <settings>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Art Objects</setting>
+                <setting name="add_label" locale="en_US">Add art object</setting>
                 <setting name="list_format">list</setting>
-                <setting name="display_template"> <![CDATA[  ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber (^ca_objects.idno)</l> <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> ^ca_entities.preferred_labels.displayname</unit><br>^ca_objects.preferred_labels <br>
+                <setting name="display_template"> <![CDATA[  ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l> <br>^ca_objects.preferred_labels <br> <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> ^ca_entities.preferred_labels.displayname</unit>
                   <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit>]]></setting>
               </settings>
             </placement>
@@ -3158,6 +2673,7 @@
               <settings>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Documents</setting>
+                <setting name="add_label" locale="en_US">Add document</setting>
                 <setting name="list_format">list</setting>
                 <setting name="display_template"><![CDATA[<l>^ca_occurrences.idno</l> ^ca_occurrences.preferred_labels]]></setting>
               </settings>
@@ -3167,6 +2683,7 @@
               <settings>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Distributions</setting>
+                <setting name="add_label" locale="en_US">Add distribution</setting>
                 <setting name="list_format">list</setting>
                 <setting name="display_template"><![CDATA[<l>^ca_loans.idno</l> ^ca_loans.preferred_labels]]></setting>
               </settings>
@@ -3176,6 +2693,7 @@
               <settings>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Acquisitions</setting>
+                <setting name="add_label" locale="en_US">Add acquisition</setting>
                 <setting name="list_format">list</setting>
                 <setting name="display_template"><![CDATA[<unit relativeTo="ca_movements"> <l>^ca_movements.idno</l> ^ca_movements.preferred_labels
 </unit>]]></setting>
@@ -3273,18 +2791,6 @@
             </placement>
           </bundlePlacements>
         </screen>
-        <screen idno="media" default="0">
-          <labels>
-            <label locale="en_US">
-              <name>Media</name>
-            </label>
-          </labels>
-          <bundlePlacements>
-            <placement code="media">
-              <bundle>ca_attribute_media</bundle>
-            </placement>
-          </bundlePlacements>
-        </screen>
         <screen idno="relationships" default="0">
           <labels>
             <label locale="en_US">
@@ -3296,14 +2802,27 @@
               <bundle>ca_objects</bundle>
               <settings>
                 <setting name="display_template"> <![CDATA[  <unit relativeTo="ca_objects"> 
-   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber (^ca_objects.idno)</l>   <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>, <I>^ca_objects.preferred_labels</I>, 
+   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l>, <I>^ca_objects.preferred_labels</I>,  <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>
                   <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit></unit>  ]]></setting>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Art Objects</setting>
+                <setting name="add_label" locale="en_US">Add art object</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
                 <setting name="sortDirection">ASC</setting>
               </settings>
+            </placement>
+          </bundlePlacements>
+        </screen>
+        <screen idno="media" default="0">
+          <labels>
+            <label locale="en_US">
+              <name>Media</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="media">
+              <bundle>ca_attribute_media</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3340,6 +2859,7 @@
               <settings>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Seller</setting>
+                <setting name="add_label" locale="en_US">Add seller</setting>
                 <setting name="list_format">list</setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="maxRelationshipsPerRow">1</setting>
@@ -3395,15 +2915,15 @@
               <bundle>ca_objects</bundle>
               <settings>
                 <setting name="label" locale="en_US">Related Art Objects</setting>
+                <setting name="add_label" locale="en_US">Add art object</setting>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="list_format">list</setting>
                  <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
                 <setting name="sortDirection">ASC</setting>
                 <setting name="display_template"> <![CDATA[ <unit relativeTo="ca_objects"> 
-   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber (^ca_objects.idno)</l>   <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>, <I>^ca_objects.preferred_labels</I>, 
+   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l>, <I>^ca_objects.preferred_labels</I>, <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>,
                   <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit></unit>      <br>
                  Identifier: ^ca_movements_x_objects.AcqObjJoin_ID<br>
-                 Description: ^ca_movements_x_objects.AcqObjJoin_TitleDescription<br>
                  Type: ^ca_movements_x_objects.AcqObjJoin_Type <br>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_Attribution">Attribution History: ^ca_movements_x_objects.AcqObjJoin_Attribution </ifdef>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_PriceUSD"> <br>Purchase Amount: ^ca_movements_x_objects.AcqObjJoin_PriceUSD </ifdef>
@@ -3458,6 +2978,7 @@
               <bundle>ca_entities</bundle>
               <settings>
                 <setting name="label" locale="en_US">Institution</setting>
+                <setting name="add_label" locale="en_US">Add institution</setting>
                 <setting name="list_format">list</setting>
                 <setting name="maxRelationshipsPerRow">1</setting>
               </settings>
@@ -3493,9 +3014,10 @@
               <bundle>ca_objects</bundle>
               <settings>
                 <setting name="display_template"> <![CDATA[  <unit relativeTo="ca_objects"> 
-   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber (^ca_objects.idno)</l>   <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>, <I>^ca_objects.preferred_labels</I>, 
+   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l> <I>^ca_objects.preferred_labels</I>,   <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>, 
                   <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit></unit>  ]]></setting>
                 <setting name="label" locale="en_US">Related Art Objects</setting>
+                <setting name="add_label" locale="en_US">Add art object</setting>
                 <setting name="disableQuickadd">1</setting>
                 <setting name="list_format">list</setting>
                  <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
@@ -3526,12 +3048,6 @@
                 <setting name="label" locale="en_US">Identifier</setting>
               </settings>
             </placement>
-            <placement code="preferred_labels">
-              <bundle>preferred_labels</bundle>
-              <settings>
-                <setting name="label" locale="en_US">Description</setting>
-              </settings>
-            </placement>
             <placement code="ca_attribution_AcqObjJoin_Type">
               <bundle>ca_attribute_AcqObjJoin_Type</bundle>
             </placement>
@@ -3550,11 +3066,38 @@
             <placement code="ca_attribute_AcqObjJoin_InternalNote">
               <bundle>ca_attribute_AcqObjJoin_InternalNote</bundle>
             </placement>
-            <placement code="ca_attribute_AcqObjJoin_ImageCreditLine">
-              <bundle>ca_attribute_AcqObjJoin_ImageCreditLine</bundle>
+          </bundlePlacements>
+        </screen>
+      </screens>
+    </userInterface>
+    <userInterface code="object_representations" type="ca_object_representations">
+      <labels>
+        <label locale="en_US">
+          <name>Movement Interstitial</name>
+        </label>
+      </labels>
+      <screens>
+        <screen idno="general" default="0" color="000000">
+          <labels>
+            <label locale="en_US">
+              <name>general</name>
+            </label>
+          </labels>
+          <bundlePlacements>
+            <placement code="idno">
+              <bundle>idno</bundle>
+              <settings>
+                <setting name="label" locale="en_US">Identifier</setting>
+              </settings>
             </placement>
-            <placement code="ca_attribute_AcqObjJoin_ImageFilename">
-              <bundle>ca_attribute_AcqObjJoin_ImageFilename</bundle>
+            <placement code="preferred_labels">
+              <bundle>preferred_labels</bundle>
+              <settings>
+                <setting name="label" locale="en_US">File Name</setting>
+              </settings>
+            </placement>
+            <placement code="credit_line">
+              <bundle>credit_line</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3597,7 +3140,17 @@
           </labels>
           <subTypeLeft> </subTypeLeft>
           <subTypeRight></subTypeRight>
-        </type>      
+        </type>     
+        <type code="attribution" default="0">
+          <labels>
+            <label locale="en_US">
+              <typename>attribution</typename>
+              <typename_reverse>attribution</typename_reverse>
+            </label>
+          </labels>
+          <subTypeLeft> </subTypeLeft>
+          <subTypeRight></subTypeRight>
+        </type>
       </types>
     </relationshipTable>
     <relationshipTable name="ca_objects_x_occurrences">
@@ -3784,6 +3337,188 @@
         <placement code="ca_movements_Acquisition_InternalNote">
           <bundle>ca_movements.Acquisition_InternalNote</bundle>
         </placement>
+        
+      </bundlePlacements>
+    </display>
+    <display code="acquisition_display" type="ca_movements" system="1">
+      <labels>
+        <label locale="en_US">
+          <name>acquisition display</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="show_empty_values"><![CDATA[1]]></setting>
+        <setting name="bottom_line"><![CDATA[]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_thumbnail]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_full]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_list]]></setting>
+      </settings>
+      <userAccess>
+        <permission user="administrator" access="edit"/>
+      </userAccess>
+      <bundlePlacements>
+        <placement code="ca_movements_idno">
+          <bundle>ca_movements.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+            <setting name="format"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_movements_preferred_labels">
+          <bundle>ca_movements.preferred_labels</bundle>
+          <settings>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="label" locale="en_US">Description</setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="label" locale="en_US">Seller</setting>
+            <setting name="delimiter"><![CDATA[;]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_movements_Acquisition_Date">
+          <bundle>ca_movements.Acquisition_Date</bundle>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="object_summary" type="ca_objects" system="1">
+      <labels>
+        <label locale="en_US">
+          <name>art object summary</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="show_empty_values"><![CDATA[0]]></setting>
+        <setting name="bottom_line"><![CDATA[]]></setting>
+        <setting name="show_only_in"><![CDATA[editor_summary]]></setting>
+      </settings>
+      <userAccess>
+        <permission user="administrator" access="edit"/>
+        <permission user="test_user2" access="read"/>
+      </userAccess>
+      <bundlePlacements>
+        <placement code="ca_object_representations_media_icon">
+          <bundle>ca_object_representations.media.icon</bundle>
+          <settings>
+            <setting name="display_mode"><![CDATA[media]]></setting>
+            <setting name="show_nonprimary"><![CDATA[0]]></setting>
+            <setting name="label" locale="en_US">Media</setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_idno">
+          <bundle>ca_objects.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+            <setting name="format"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_Object_KressCatalogNumber">
+          <bundle>ca_objects.Object_KressCatalogNumber</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[2048]]></setting>
+            <setting name="filter"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_Object_Classification">
+          <bundle>ca_objects.Object_Classification</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[2048]]></setting>
+            <setting name="filter"><![CDATA[]]></setting>
+            <setting name="sense"><![CDATA[singular]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Artist</setting>
+            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
+            <setting name="restrict_to_relationship_types"><![CDATA[artist]]></setting>
+            <setting name="delimiter"><![CDATA[;]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_entities_attribution">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Attribution</setting>
+            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
+            <setting name="restrict_to_relationship_types"><![CDATA[attribution]]></setting>
+            <setting name="delimiter"><![CDATA[;]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_Object_ArtistExpression">
+          <bundle>ca_objects.Object_ArtistExpression</bundle>
+        </placement>
+        <placement code="ca_objects_Object_Nationality">
+          <bundle>ca_objects.Object_Nationality</bundle>
+        </placement>
+        <placement code="ca_objects_preferred_labels">
+          <bundle>ca_objects.preferred_labels</bundle>
+        </placement>
+        <placement code="ca_objects_Object_DateExpression">
+          <bundle>ca_objects.Object_DateExpression</bundle>
+        </placement>
+        <placement code="ca_objects_Object_Medium">
+          <bundle>ca_objects.Object_Medium</bundle>
+        </placement>
+        <placement code="ca_objects_Object_Dimensions">
+          <bundle>ca_objects.Object_Dimensions</bundle>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Location</setting>
+            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
+            <setting name="restrict_to_relationship_types"><![CDATA[location]]></setting>
+            <setting name="delimiter"><![CDATA[;]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_objects_Object_Provenance">
+          <bundle>ca_objects.Object_Provenance</bundle>
+        </placement>
+        <placement code="ca_objects_Object_Note">
+          <bundle>ca_objects.Object_Note</bundle>
+        </placement>
+        <placement code="ca_objects_Object_InternalNote">
+          <bundle>ca_objects.Object_InternalNote</bundle>
+        </placement>
       </bundlePlacements>
     </display>
     <display code="artwork_display" type="ca_objects" system="1">
@@ -3902,6 +3637,59 @@
         </placement>
       </bundlePlacements>
     </display>
+    <display code="distribution_display" type="ca_loans" system="1">
+      <labels>
+        <label locale="en_US">
+          <name>distribution display</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="show_empty_values"><![CDATA[1]]></setting>
+        <setting name="bottom_line"><![CDATA[]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_thumbnail]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_full]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_list]]></setting>
+      </settings>
+      <userAccess>
+        <permission user="administrator" access="edit"/>
+      </userAccess>
+      <bundlePlacements>
+        <placement code="ca_loans_idno">
+          <bundle>ca_loans.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+            <setting name="format"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_loans_preferred_labels">
+          <bundle>ca_loans.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Description</setting>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Institution</setting>
+            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
+            <setting name="delimiter"><![CDATA[;]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_loans_Distribution_AcceptDate">
+          <bundle>ca_loans.Distribution_AcceptDate</bundle>
+        </placement>
+      </bundlePlacements>
+    </display>
     <display code="document_summary" type="ca_occurrences" system="1">
       <labels>
         <label locale="en_US">
@@ -3978,6 +3766,89 @@
         <placement code="ca_occurrences_Doc_Photographer">
           <bundle>ca_occurrences.Doc_Photographer</bundle>
         </placement>
+        <placement code="ca_objects">
+          <bundle>ca_ca_objects</bundle>
+          <settings>
+            <setting name="format"><![CDATA[<unit relativeTo="ca_objects"> 
+   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l>, <I>^ca_objects.preferred_labels</I>,  <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>
+                  <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit></unit>]]></setting>
+            <setting name="label" locale="en_US">Related Art Objects</setting>
+            <setting name="delimiter"><![CDATA[<br>]]></setting>
+          </settings>
+        </placement>
+      </bundlePlacements>
+    </display>
+    <display code="document_display" type="ca_occurrences" system="1">
+      <labels>
+        <label locale="en_US">
+          <name>document display</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="show_empty_values"><![CDATA[1]]></setting>
+        <setting name="bottom_line"><![CDATA[]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_thumbnail]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_full]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_list]]></setting>
+      </settings>
+      <userAccess>
+        <permission user="administrator" access="edit"/>
+      </userAccess>
+      <bundlePlacements>
+        <placement code="ca_occurrences_idno">
+          <bundle>ca_occurrences.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+            <setting name="format"><![CDATA[]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_occurrences_Doc_Type">
+          <bundle>ca_occurrences.Doc_Type</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Type</setting>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[2048]]></setting>
+            <setting name="filter"><![CDATA[]]></setting>
+            <setting name="sense"><![CDATA[singular]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_entities">
+          <bundle>ca_entities</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Creator</setting>
+            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
+            <setting name="delimiter"><![CDATA[;]]></setting>
+            <setting name="sort"><![CDATA[]]></setting>
+            <setting name="show_hierarchy"><![CDATA[0]]></setting>
+            <setting name="remove_first_items"><![CDATA[0]]></setting>
+            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
+            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
+            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_occurrences_preferred_labels">
+          <bundle>ca_occurrences.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Description</setting>
+            <setting name="format"><![CDATA[]]></setting>
+            <setting name="delimiter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
+          </settings>
+        </placement>
+        <placement code="ca_occurrences_Doc_Date">
+          <bundle>ca_occurrences.Doc_Date</bundle>
+        </placement>
+        <placement code="ca_objects">
+          <bundle>ca_ca_objects</bundle>
+          <settings>
+            <setting name="format"><![CDATA[<unit relativeTo="ca_objects"> 
+    <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l>]]></setting>
+            <setting name="label" locale="en_US">Art Object/s</setting>
+            <setting name="delimiter"><![CDATA[<br>]]></setting>
+          </settings>
+        </placement>
       </bundlePlacements>
     </display>
     <display code="entities_summary" type="ca_entities" system="1">
@@ -4015,6 +3886,9 @@
         <placement code="ca_entities_nonpreferred_labels">
           <bundle>ca_entities.nonpreferred_labels</bundle>
         </placement>
+        <placement code="ca_entities_Name_DateExpression">
+          <bundle>ca_entities.Name_DateExpression</bundle>
+        </placement>
         <placement code="ca_entities_Name_Type">
           <bundle>ca_entities.Name_Type</bundle>
         </placement>
@@ -4044,116 +3918,45 @@
         </placement>
       </bundlePlacements>
     </display>
-    <display code="object_summary" type="ca_objects" system="1">
+    <display code="entities_display" type="ca_entities" system="1">
       <labels>
         <label locale="en_US">
-          <name>object summary</name>
+          <name>name authorities display</name>
         </label>
       </labels>
       <settings>
-        <setting name="show_empty_values"><![CDATA[0]]></setting>
+        <setting name="show_empty_values"><![CDATA[1]]></setting>
         <setting name="bottom_line"><![CDATA[]]></setting>
-        <setting name="show_only_in"><![CDATA[editor_summary]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_thumbnail]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_full]]></setting>
+        <setting name="show_only_in"><![CDATA[search_browse_list]]></setting>
       </settings>
       <userAccess>
         <permission user="administrator" access="edit"/>
-        <permission user="test_user2" access="read"/>
       </userAccess>
       <bundlePlacements>
-        <placement code="ca_object_representations_media_icon">
-          <bundle>ca_object_representations.media.icon</bundle>
-          <settings>
-            <setting name="display_mode"><![CDATA[media]]></setting>
-            <setting name="show_nonprimary"><![CDATA[0]]></setting>
-            <setting name="label" locale="en_US">Media</setting>
-            <setting name="delimiter"><![CDATA[]]></setting>
-          </settings>
-        </placement>
-        <placement code="ca_objects_idno">
-          <bundle>ca_objects.idno</bundle>
+        <placement code="ca_entities_idno">
+          <bundle>ca_entities.idno</bundle>
           <settings>
             <setting name="label" locale="en_US">Identifier</setting>
             <setting name="maximum_length"><![CDATA[100]]></setting>
             <setting name="format"><![CDATA[]]></setting>
           </settings>
         </placement>
-        <placement code="ca_objects_Object_KressCatalogNumber">
-          <bundle>ca_objects.Object_KressCatalogNumber</bundle>
+        <placement code="ca_entities_preferred_labels">
+          <bundle>ca_entities.preferred_labels</bundle>
           <settings>
-            <setting name="label" locale="en_US"/>
+            <setting name="label" locale="en_US">Name</setting>
             <setting name="format"><![CDATA[]]></setting>
             <setting name="delimiter"><![CDATA[]]></setting>
-            <setting name="maximum_length"><![CDATA[2048]]></setting>
-            <setting name="filter"><![CDATA[]]></setting>
+            <setting name="maximum_length"><![CDATA[100]]></setting>
           </settings>
         </placement>
-        <placement code="ca_objects_Object_Classification">
-          <bundle>ca_objects.Object_Classification</bundle>
-          <settings>
-            <setting name="label" locale="en_US"/>
-            <setting name="format"><![CDATA[]]></setting>
-            <setting name="delimiter"><![CDATA[]]></setting>
-            <setting name="maximum_length"><![CDATA[2048]]></setting>
-            <setting name="filter"><![CDATA[]]></setting>
-            <setting name="sense"><![CDATA[singular]]></setting>
-          </settings>
+        <placement code="ca_entities_Name_Type">
+          <bundle>ca_entities.Name_Type</bundle>
         </placement>
-        <placement code="ca_entities">
-          <bundle>ca_entities</bundle>
-          <settings>
-            <setting name="label" locale="en_US">Artist</setting>
-            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
-            <setting name="restrict_to_relationship_types"><![CDATA[artist]]></setting>
-            <setting name="delimiter"><![CDATA[;]]></setting>
-            <setting name="sort"><![CDATA[]]></setting>
-            <setting name="show_hierarchy"><![CDATA[0]]></setting>
-            <setting name="remove_first_items"><![CDATA[0]]></setting>
-            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
-            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
-            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
-          </settings>
-        </placement>
-        <placement code="ca_objects_Object_ArtistExpression">
-          <bundle>ca_objects.Object_ArtistExpression</bundle>
-        </placement>
-        <placement code="ca_objects_Object_Nationality">
-          <bundle>ca_objects.Object_Nationality</bundle>
-        </placement>
-        <placement code="ca_objects_preferred_labels">
-          <bundle>ca_objects.preferred_labels</bundle>
-        </placement>
-        <placement code="ca_objects_Object_DateExpression">
-          <bundle>ca_objects.Object_DateExpression</bundle>
-        </placement>
-        <placement code="ca_objects_Object_Medium">
-          <bundle>ca_objects.Object_Medium</bundle>
-        </placement>
-        <placement code="ca_objects_Object_Dimensions">
-          <bundle>ca_objects.Object_Dimensions</bundle>
-        </placement>
-        <placement code="ca_entities">
-          <bundle>ca_entities</bundle>
-          <settings>
-            <setting name="label" locale="en_US">Location</setting>
-            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
-            <setting name="restrict_to_relationship_types"><![CDATA[location]]></setting>
-            <setting name="delimiter"><![CDATA[;]]></setting>
-            <setting name="sort"><![CDATA[]]></setting>
-            <setting name="show_hierarchy"><![CDATA[0]]></setting>
-            <setting name="remove_first_items"><![CDATA[0]]></setting>
-            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
-            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
-            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
-          </settings>
-        </placement>
-        <placement code="ca_objects_Object_Provenance">
-          <bundle>ca_objects.Object_Provenance</bundle>
-        </placement>
-        <placement code="ca_objects_Object_Note">
-          <bundle>ca_objects.Object_Note</bundle>
-        </placement>
-        <placement code="ca_objects_Object_InternalNote">
-          <bundle>ca_objects.Object_InternalNote</bundle>
+        <placement code="ca_entities_Name_Location">
+          <bundle>ca_entities.Name_Location</bundle>
         </placement>
       </bundlePlacements>
     </display>
