@@ -1,6 +1,4 @@
-Master Acq Object Join Data : Table 1
-
-AcqObjJoin_ID,AcqObjJoin_Type,AcqObjJoin_PriceUSD,AcqObjJoin_CreditUSD,AcqObjJoin_ReturnUSD,AcqObjJoin_Attribution,AcqObjJoin_AttributionArtistNameID,AcqObjJoin_InternalNote,AcqObjJoin_RelatedObjectID,AcqObjJoin_RelatedAcquisitionID,
+﻿AcqObjJoin_ID,AcqObjJoin_Type,AcqObjJoin_PriceUSD,AcqObjJoin_CreditUSD,AcqObjJoin_ReturnUSD,AcqObjJoin_Attribution,AcqObjJoin_AttributionArtistNameID,AcqObjJoin_InternalNote,AcqObjJoin_RelatedObjectID,AcqObjJoin_RelatedAcquisitionID,
 PJN00001,Purchase,"$365,000.00",,,Acquired as Diane de Poitiers by François Clouet,NAM0259,,53,ACQ101,
 PJN00002,Purchase,,,,Acquired as Sketch for Venice Alterpiece Scene by Sebastiano Ricci,NAM1002,"K163 and K164 bought as a pair for $ 7,000.00.",64,ACQ122,
 PJN00003,Purchase,"$140,000.00",,,Acquired as A Vestal by Clodion,NAM0258,Object mislabeled as K1671 on invoice. ,124,ACQ010,
@@ -1611,7 +1609,7 @@ PJN02050,Purchase,"$2,500.00",,,Acquired as Cover of Red Velvet,NAM0039,,5612,AC
 PJN02051,Purchase,"$1,000.00",,,Acquired as Cover of Green Velvet,NAM0039,,5613,ACQ005,
 PJN02052,Purchase,"$2,000.00",,,"Acquired as Majolica Vase, Derute",NAM0039,,5617,ACQ112,
 PJN02053,Purchase,$700.00,,,Acquired as A Saint by Early Florentine Primitive,NAM0039,,2551,ACQ278,
-PJN02056,Purchase,"$7,500.00",,,Acquired as St. Margaret with the Dragon by Heinrich Yselin,,,3329,ACQ061,
+PJN02056,Purchase,"$7,500.00",,,Acquired as St. Margaret with the Dragon by Heinrich Yselin,#N/A,,3329,ACQ061,
 PJN02059,Purchase,"$90,000.00",,,"Acquired as The Madonna and Child known as The Madonna of the Pomegranate, attributed to Leonardo da Vinci",NAM0626,,1358,ACQ264,
 PJN02060,Purchase,"$6,750.00",,,Acquired as The Musicians by Bernardo Strozzi,NAM1143,,5618,ACQ247,
 PJN02061,Purchase,,,,Acquired as Coast Scene by Alessandro Magnasco,NAM0675,"Bought with K2106 for $16,725.60.",5619,ACQ013,
@@ -3588,24 +3586,3 @@ PJN04126,Purchase,"$30,000.00",,,"Acquired as Saint George and the Dragon by Sch
 PJN04127,Purchase,"$35,000.00",,,"Acquired as The Holy Trinity, English 14th century",NAM0353,,2197,ACQ303,
 PJN04128,Purchase,"$25,000.00",,,Acquired as Emperor Charles V by Leone Leoni,NAM0627,Originally combined with PurchID_64,711,ACQ409,
 PJN09001,Purchase,"$25,000.00",,,Acquired as Madonna and Child with St. John and Two Saints by Raffaelino del Garbo,NAM0988,"This object was on a purchase 10/15/27, but tied to invoice on 10/14/1927. ",3624,ACQ204,
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,
-
-Acq Object Join Schema: Table 1
-
-Field,Display,Note,Filter,
-AcqObjJoin_ID,Identifier,,,
-AcqObjJoin_TitleDescription ,Description,,,
-AcqObjJoin_Type,,,,
-AcqObjJoin_Attribution,Attribution History,,,
-AcqObjJoin_AttributionArtistNameID [NameAuthority::OfficialCombined],,for bringing in Name Authority data (Artist),,
-AcqObjJoin_PriceUSD,Purchase Amount,,,
-AcqObjJoin_CreditUSD,Credit Amount,,,
-AcqObjJoin_ReturnUSD,Return Amount,,,
-AcqObjJoin_InternalNote,,,,
-AcqObjJoin_ImageCreditLine,Image Credit Line,,,
-AcqObjJoin_ImageFilename,,image file(s) displayed with record,,
-AcqObjJoin_RelatedObjectID,Art Objects,for bringing in related Art Object record,,
-AcqObjJoin_RelatedAcquisitionID,Acquisitions,for bringing in related Acquisition record,,
