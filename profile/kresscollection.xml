@@ -788,7 +788,8 @@
         <setting name="fieldWidth">110</setting>
         <setting name="fieldHeight">20</setting>
         <setting name="minChars">0</setting>
-        <setting name="maxChars">10000</setting>
+        <setting name="maxChars">100000</setting>
+        <setting name="usewysiwygeditor">1</setting>
       </settings>
       <typeRestrictions>
         <restriction code="r1">
