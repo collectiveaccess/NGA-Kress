@@ -310,7 +310,7 @@
   <list code="Object_Classification" hierarchical="0" system="0" vocabulary="0">
     <labels>
       <label locale="en_US">
-        <name>Object_Classification</name>
+        <name>Object Classification</name>
       </label>
     </labels>
     <items>
@@ -382,7 +382,7 @@
         <labels>
           <label locale="en_US" preferred="1">
             <name_singular>Sculpture</name_singular>
-            <name_plural>Sculpture"</name_plural>
+            <name_plural>Sculptures</name_plural>
           </label>
         </labels>
       </item>
@@ -508,38 +508,9 @@
               <setting name="fieldWidth">40</setting>
             </settings>
           </metadataElement>
-          <metadataElement code="media_primary" datatype="List" list="yn">
-            <labels>
-              <label locale="en_US">
-                <name>Primary?</name>
-              </label>
-            </labels>
-            <settings>
-              <setting name="render">yes_no_checkboxes</setting>
-              <setting name="fieldWidth">40</setting>
-            </settings>
-          </metadataElement>
+          
         </elements>
       </metadataElement>
-        <metadataElement code="media_line2" datatype="Container">
-          <labels>
-            <label locale="en_US">
-              <name>media Line 3</name>
-            </label>
-          </labels>
-          <elements>
-            <metadataElement code="media_credit_line" datatype="Text">
-              <labels>
-                <label locale="en_US">
-                  <name>Credit Line</name>
-                </label>
-              </labels>
-              <settings>
-                <setting name="fieldWidth">110</setting>
-              </settings>
-            </metadataElement>
-          </elements>
-        </metadataElement> 
         <metadataElement code="media_line3" datatype="Container">
           <labels>
             <label locale="en_US">
@@ -568,14 +539,6 @@
         </restriction>
         <restriction>
           <table>ca_movements</table>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">225</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction>
-          <table>ca_objects</table>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">225</setting>
@@ -2568,10 +2531,19 @@
             <placement code="ca_object_representations">
               <bundle>ca_object_representations</bundle>
               <settings>
-              <setting name="sort"><![CDATA[]]></setting>
+                <setting name="expand_collapse_value">dont_force</setting>
+                <setting name="expand_collapse_no_value">dont_force</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="list_format">bubbles</setting>
                 <setting name="sortDirection">DESC</setting>
-                <setting name="display_template"><![CDATA[^ca_object_representations.credit_line]]></setting>
-            </settings>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="display_template"><![CDATA[^ca_object_representations.preferred_labels <br> ^ca_object_representations.credit_line]]></setting>
+                <setting name="disableSorts">0</setting>
+                <setting name="numPerPage"/>
+                <setting name="uiStyle">NEW_UI</setting>
+                <setting name="showBundlesForEditing">ca_object_representations.credit_line</setting>
+                <setting name="showBundlesForEditing">access</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>       
@@ -2823,6 +2795,20 @@
           <bundlePlacements>
             <placement code="media">
               <bundle>ca_attribute_media</bundle>
+              <settings>
+                <setting name="expand_collapse_value">dont_force</setting>
+                <setting name="expand_collapse_no_value">dont_force</setting>
+                <setting name="dont_include_subtypes_in_type_restriction">0</setting>
+                <setting name="list_format">bubbles</setting>
+                <setting name="sortDirection">DESC</setting>
+                <setting name="dontShowDeleteButton">0</setting>
+                <setting name="display_template"><![CDATA[^ca_object_representations.preferred_labels]]></setting>
+                <setting name="disableSorts">0</setting>
+                <setting name="numPerPage"/>
+                <setting name="uiStyle">NEW_UI</setting>
+                <setting name="showBundlesForEditing">ca_object_representations.credit_line</setting>
+                <setting name="showBundlesForEditing">access</setting>
+              </settings>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3374,20 +3360,6 @@
             <setting name="maximum_length"><![CDATA[100]]></setting>
           </settings>
         </placement>
-        <placement code="ca_entities">
-          <bundle>ca_entities</bundle>
-          <settings>
-            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
-            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
-            <setting name="label" locale="en_US">Seller</setting>
-            <setting name="delimiter"><![CDATA[;]]></setting>
-            <setting name="sort"><![CDATA[]]></setting>
-            <setting name="show_hierarchy"><![CDATA[0]]></setting>
-            <setting name="remove_first_items"><![CDATA[0]]></setting>
-            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
-            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
-          </settings>
-        </placement>
         <placement code="ca_movements_Acquisition_Date">
           <bundle>ca_movements.Acquisition_Date</bundle>
         </placement>
@@ -3610,7 +3582,6 @@
           <bundle>ca_entities</bundle>
           <settings>
             <setting name="label" locale="en_US">Institution</setting>
-            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
             <setting name="delimiter"><![CDATA[;]]></setting>
             <setting name="sort"><![CDATA[]]></setting>
             <setting name="show_hierarchy"><![CDATA[0]]></setting>
@@ -3675,7 +3646,6 @@
           <bundle>ca_entities</bundle>
           <settings>
             <setting name="label" locale="en_US">Institution</setting>
-            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
             <setting name="delimiter"><![CDATA[;]]></setting>
             <setting name="sort"><![CDATA[]]></setting>
             <setting name="show_hierarchy"><![CDATA[0]]></setting>
@@ -3814,20 +3784,6 @@
             <setting name="sense"><![CDATA[singular]]></setting>
           </settings>
         </placement>
-        <placement code="ca_entities">
-          <bundle>ca_entities</bundle>
-          <settings>
-            <setting name="label" locale="en_US">Creator</setting>
-            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
-            <setting name="delimiter"><![CDATA[;]]></setting>
-            <setting name="sort"><![CDATA[]]></setting>
-            <setting name="show_hierarchy"><![CDATA[0]]></setting>
-            <setting name="remove_first_items"><![CDATA[0]]></setting>
-            <setting name="hierarchy_order"><![CDATA[ASC]]></setting>
-            <setting name="hierarchy_limit"><![CDATA[0]]></setting>
-            <setting name="hierarchical_delimiter"><![CDATA[ ➔ ]]></setting>
-          </settings>
-        </placement>
         <placement code="ca_occurrences_preferred_labels">
           <bundle>ca_occurrences.preferred_labels</bundle>
           <settings>
@@ -3839,15 +3795,6 @@
         </placement>
         <placement code="ca_occurrences_Doc_Date">
           <bundle>ca_occurrences.Doc_Date</bundle>
-        </placement>
-        <placement code="ca_objects">
-          <bundle>ca_ca_objects</bundle>
-          <settings>
-            <setting name="format"><![CDATA[<unit relativeTo="ca_objects"> 
-    <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l>]]></setting>
-            <setting name="label" locale="en_US">Art Object/s</setting>
-            <setting name="delimiter"><![CDATA[<br>]]></setting>
-          </settings>
         </placement>
       </bundlePlacements>
     </display>
@@ -3972,26 +3919,89 @@
         <setting name="form_width">3</setting>
       </settings>
       <bundlePlacements>
-        <placement code="preferred_labels">
-          <bundle>ca_object_labels.name</bundle>
+        <placement code="p1">
+          <bundle>ca_objects.idno</bundle>
           <settings>
-            <setting name="label" locale="en_US">Title</setting>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="width">200px</setting>
           </settings>
         </placement>
-        <placement code="idno">
-          <bundle>ca_objects.idno</bundle>
+        <placement code="p2">
+          <bundle>ca_objects.Object_KressCatalogNumber</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="type_id">
-          <bundle>ca_objects.type_id</bundle>
+        <placement code="p3">
+          <bundle>ca_objects.Object_Classification</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="ca_entities">
+        <placement code="p6">
+          <bundle>ca_objects.Object_ArtistExpression</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p7">
+          <bundle>ca_objects.Object_Nationality</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p9">
+          <bundle>ca_objects.Object_DateExpression</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p10">
+          <bundle>ca_objects.Object_Medium</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p11">
+          <bundle>ca_objects.Object_Dimensions</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p13">
+          <bundle>ca_objects.Object_Provenance</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p14">
+          <bundle>ca_objects.Object_Note</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">100px</setting>
+          </settings>
+        </placement>
+        <placement code="p15">
+          <bundle>ca_objects.Object_InternalNote</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p56">
           <bundle>ca_entity_labels.displayname</bundle>
-        </placement>
-        <placement code="access">
-          <bundle>ca_objects.access</bundle>
-        </placement>
-        <placement code="status">
-          <bundle>ca_objects.status</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Related Name Authorities</setting>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
       </bundlePlacements>
     </searchForm>
@@ -4008,57 +4018,86 @@
         <setting name="form_width">3</setting>
       </settings>
       <bundlePlacements>
-        <placement code="forename">
-          <bundle>ca_entity_labels.forename</bundle>
-        </placement>
-        <placement code="middlename">
-          <bundle>ca_entity_labels.middlename</bundle>
-        </placement>
-        <placement code="surname">
-          <bundle>ca_entity_labels.surname</bundle>
-        </placement>
-        <placement code="idno">
+        <placement code="p16">
           <bundle>ca_entities.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="type_id">
-          <bundle>ca_entities.type_id</bundle>
+        <placement code="p19">
+          <bundle>ca_entities.Name_DateExpression</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="access">
-          <bundle>ca_entities.access</bundle>
+        <placement code="p20">
+          <bundle>ca_entities.Name_Type</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="status">
-          <bundle>ca_entities.status</bundle>
+        <placement code="p21">
+          <bundle>ca_entities.Name_KressInstitutionType</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p22">
+          <bundle>ca_entities.Name_InstitutionStatus</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p23">
+          <bundle>ca_entities.Name_Nationality</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p24">
+          <bundle>ca_entities.Name_BirthDateFilter</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p25">
+          <bundle>ca_entities.Name_DeathDateFilter</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p26">
+          <bundle>ca_entities.Name_Location</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p27">
+          <bundle>ca_entities.Name_InternalNote</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p57">
+          <bundle>ca_entity_labels.displayname</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Name</setting>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
       </bundlePlacements>
     </searchForm>
-    <searchForm code="ca_places_adv_search" type="ca_places" system="1">
-      <labels>
-        <label locale="en_US">
-          <name>Extended search</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="form_width">3</setting>
-      </settings>
-      <bundlePlacements>
-        <placement code="name">
-          <bundle>ca_place_labels.name</bundle>
-        </placement>
-        <placement code="idno">
-          <bundle>ca_places.idno</bundle>
-        </placement>
-        <placement code="type_id">
-          <bundle>ca_places.type_id</bundle>
-        </placement>
-        <placement code="access">
-          <bundle>ca_places.access</bundle>
-        </placement>
-        <placement code="status">
-          <bundle>ca_places.status</bundle>
-        </placement>
-      </bundlePlacements>
-    </searchForm>
-    <searchForm code="ca_occurrences_adv_search" type="ca_occurrences" system="1">
+    <searchForm code="ca_occurrences_adv_search" type="ca_occurrences" system="1" typeRestrictions="documentation" includeSubtypes="0">
       <labels>
         <label locale="en_US">
           <name>Extended search</name>
@@ -4071,65 +4110,54 @@
         <setting name="form_width">3</setting>
       </settings>
       <bundlePlacements>
-        <placement code="forename">
-          <bundle>ca_occurrence_labels.name</bundle>
+        <placement code="p28">
+          <bundle>ca_occurrences.idno</bundle>
           <settings>
-            <setting name="label" locale="en_US">Title</setting>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="width">200px</setting>
           </settings>
         </placement>
-        <placement code="idno">
-          <bundle>ca_occurrences.idno</bundle>
+        <placement code="p29">
+          <bundle>ca_occurrences.Doc_Type</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Type</setting>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="access">
-          <bundle>ca_places.access</bundle>
+        <placement code="p32">
+          <bundle>ca_occurrences.Doc_Date</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="status">
-          <bundle>ca_places.status</bundle>
+        <placement code="p33">
+          <bundle>ca_occurrences.Doc_Source</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Source</setting>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-      </bundlePlacements>
-    </searchForm>
-    <searchForm code="ca_collections_adv_search" type="ca_collections" system="1">
-      <labels>
-        <label locale="en_US">
-          <name>Extended search</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="form_width">3</setting>
-      </settings>
-      <bundlePlacements>
-        <placement code="name">
-          <bundle>ca_collection_labels.name</bundle>
+        <placement code="p34">
+          <bundle>ca_occurrences.Doc_Note</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="idno">
-          <bundle>ca_collections.idno</bundle>
+        <placement code="p35">
+          <bundle>ca_occurrences.Doc_Photographer</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
-        <placement code="type_id">
-          <bundle>ca_collections.type_id</bundle>
-        </placement>
-        <placement code="access">
-          <bundle>ca_collections.access</bundle>
-        </placement>
-        <placement code="status">
-          <bundle>ca_collections.status</bundle>
-        </placement>
-      </bundlePlacements>
-    </searchForm>
-    <searchForm code="ca_storage_locations_adv_search" type="ca_storage_locations" system="1">
-      <labels>
-        <label locale="en_US">
-          <name>Extended search</name>
-        </label>
-      </labels>
-      <settings>
-        <setting name="form_width">3</setting>
-      </settings>
-      <bundlePlacements>
-        <placement code="name">
-          <bundle>ca_storage_location_labels.name</bundle>
-        </placement>
-        <placement code="type_id">
-          <bundle>ca_storage_locations.type_id</bundle>
+        <placement code="p58">
+          <bundle>ca_occurrence_labels.name</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
       </bundlePlacements>
     </searchForm>
@@ -4143,14 +4171,54 @@
         <setting name="form_width">3</setting>
       </settings>
       <bundlePlacements>
-        <placement code="name">
-          <bundle>ca_loan_labels.name</bundle>
-        </placement>
-        <placement code="type_id">
-          <bundle>ca_loans.type_id</bundle>
-        </placement>
-        <placement code="idno">
+        <placement code="p37">
           <bundle>ca_loans.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p40">
+          <bundle>ca_loans.Distribution_OfferDate</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p41">
+          <bundle>ca_loans.Distribution_OfferDocSource</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p42">
+          <bundle>ca_loans.Distribution_AcceptDate</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p43">
+          <bundle>ca_loans.Distribution_AcceptDocSource</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p44">
+          <bundle>ca_loans.Distribution_InternalNote</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p59">
+          <bundle>ca_entity_labels.displayname</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Related Name Authorities</setting>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
       </bundlePlacements>
     </searchForm>
@@ -4164,14 +4232,75 @@
         <setting name="form_width">3</setting>
       </settings>
       <bundlePlacements>
-        <placement code="name">
-          <bundle>ca_movement_labels.name</bundle>
-        </placement>
-        <placement code="type_id">
-          <bundle>ca-movements.type_id</bundle>
-        </placement>
-        <placement code="idno">
+        <placement code="p45">
           <bundle>ca_movements.idno</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Identifier</setting>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p48">
+          <bundle>ca_movements.Acquisition_Date</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p49">
+          <bundle>ca_movements.Acquisition_ObjectCount</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p50">
+          <bundle>ca_movements.Acquisition_PriceUSD</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p51">
+          <bundle>ca_movements.Acquisition_FinalPayDate</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p52">
+          <bundle>ca_movements.Acquisition_Location</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p53">
+          <bundle>ca_movements.Acquisition_Source</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p54">
+          <bundle>ca_movements.Acquisition_Note</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p55">
+          <bundle>ca_movements.Acquisition_InternalNote</bundle>
+          <settings>
+            <setting name="label" locale="en_US"/>
+            <setting name="width">200px</setting>
+          </settings>
+        </placement>
+        <placement code="p60">
+          <bundle>ca_entity_labels.displayname</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Related Name Authorities</setting>
+            <setting name="width">200px</setting>
+          </settings>
         </placement>
       </bundlePlacements>
     </searchForm>
