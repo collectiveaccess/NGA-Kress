@@ -1251,13 +1251,6 @@
       <settings>
         <setting name="render">select</setting>
         <setting name="restrictToTypes">2</setting>
-        <setting name="hideIfSelected___null__">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
-        <setting name="hideIfSelected___null__">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
-        <setting name="hideIfSelected___null__">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
-        <setting name="hideIfSelected___null__">standard_entity_ui/entity_info/ca_attribute_Name_Nationality_filter</setting>
-        <setting name="hideIfSelected___null__">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
-        <setting name="hideIfSelected___null__">standard_entity_ui/entity_info/ca_attribute_Name_Location</setting>
-        <setting name="hideIfSelected___null__">standard_entity_ui/entity_info/ca_attribute_Name_LocationFilter</setting>
         <setting name="hideIfSelected_artist">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
         <setting name="hideIfSelected_artist">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
         <setting name="hideIfSelected_artist">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
@@ -1265,17 +1258,14 @@
         <setting name="hideIfSelected_artist">standard_entity_ui/entity_info/ca_attribute_Name_LocationFilter</setting>
         <setting name="hideIfSelected_inst">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
         <setting name="hideIfSelected_inst">standard_entity_ui/entity_info/ca_attribute_Name_Nationality_filter</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Nationality_filter</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Location</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_LocationFilter</setting>
+        <setting name="hideIfSelected_inst">standard_entity_ui/entity_info/ca_attribute_Name_BirthDateFilter</setting>
+        <setting name="hideIfSelected_inst">standard_entity_ui/entity_info/ca_attribute_Name_DeathDateFilter</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_Nationality_filter</setting>
+        <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_BirthDateFilter</setting>
+        <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_DeathDateFilter</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
       </settings>
       <typeRestrictions>
@@ -2463,7 +2453,7 @@
                 <setting name="list_format">list</setting>
                 <setting name="display_template"><![CDATA[<unit relativeTo="ca_movements"> <l>^ca_movements.idno</l> ^ca_movements.preferred_labels
 		<ifcount code="ca_entities" min="1"><unit relativeTo="ca_entities"><br>Seller: <l>^ca_entities.preferred_labels.displayname</l></unit></ifcount> </unit><br>
-                 Identifier: ^ca_movements_x_objects.AcqObjJoin_ID<br>
+                
                  Type: ^ca_movements_x_objects.AcqObjJoin_Type <br>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_Attribution">Attribution History: ^ca_movements_x_objects.AcqObjJoin_Attribution </ifdef>
 <ifdef code= "ca_movements_x_objects.AcqObjJoin_PriceUSD"> <br>Purchase Amount: ^ca_movements_x_objects.AcqObjJoin_PriceUSD </ifdef>
