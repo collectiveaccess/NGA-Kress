@@ -282,7 +282,7 @@
         <labels>
           <label locale="en_US" preferred="1">
             <name_singular>Current Owner</name_singular>
-            <name_plural>Current Owners</name_plural>
+            <name_plural>Current Owner</name_plural>
             <description/>
           </label>
         </labels>
@@ -291,7 +291,7 @@
         <labels>
           <label locale="en_US" preferred="1">
             <name_singular>Former Owner</name_singular>
-            <name_plural>Former Owners</name_plural>
+            <name_plural>Former Owner</name_plural>
             <description/>
           </label>
         </labels>
@@ -1267,6 +1267,11 @@
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_BirthDateFilter</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_DeathDateFilter</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Nationality_filter</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
       </settings>
       <typeRestrictions>
         <restriction>
@@ -1456,7 +1461,7 @@
     <metadataElement code="Name_ULANID" datatype="Text">
       <labels>
         <label locale="en_US">
-          <name>ULAN Artist ID</name>
+          <name>ULAN ID</name>
         </label>
       </labels>
       <settings>
@@ -1499,7 +1504,7 @@
     <metadataElement code="Name_VIAFID" datatype="Text">
       <labels>
         <label locale="en_US">
-          <name>VIAF</name>
+          <name>VIAF ID</name>
         </label>
       </labels>
       <settings>
@@ -2550,7 +2555,7 @@
         <screen idno="entity_info" default="1">
           <labels>
             <label locale="en_US">
-              <name>Basic Info</name>
+              <name>General</name>
             </label>
           </labels>
           <bundlePlacements>
@@ -2627,8 +2632,9 @@
                 <setting name="label" locale="en_US">Related Art Objects</setting>
                 <setting name="add_label" locale="en_US">Add art object</setting>
                 <setting name="list_format">list</setting>
-                <setting name="display_template"> <![CDATA[  ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l> <br>^ca_objects.preferred_labels <br> <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> ^ca_entities.preferred_labels.displayname</unit>
-                  <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit>]]></setting>
+                <setting name="display_template"> <![CDATA[  <unit relativeTo="ca_objects"> 
+   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l>, <I>^ca_objects.preferred_labels</I>,  <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>
+                  <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit></unit>  ]]></setting>
               </settings>
             </placement>
             <placement code="ca_occurrences">
@@ -3448,6 +3454,9 @@
         </placement>
         <placement code="ca_objects_preferred_labels">
           <bundle>ca_objects.preferred_labels</bundle>
+          <settings>
+            <setting name="label" locale="en_US">Object Title</setting>
+          </settings>
         </placement>
         <placement code="ca_objects_Object_DateExpression">
           <bundle>ca_objects.Object_DateExpression</bundle>
@@ -3714,7 +3723,7 @@
         <placement code="ca_occurrences_Doc_Source">
           <bundle>ca_occurrences.Doc_Source</bundle>
           <settings>
-            <setting name="label" locale="en_US">Source</setting>
+            <setting name="label" locale="en_US">Citation</setting>
             <setting name="format"><![CDATA[]]></setting>
             <setting name="delimiter"><![CDATA[]]></setting>
             <setting name="maximum_length"><![CDATA[2048]]></setting>
