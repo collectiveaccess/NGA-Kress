@@ -11,35 +11,36 @@
 #echo "Importing artwork..."
 #bin/caUtils import-data --format=CSV  --mapping=AO01 --source=01_ArtObjects.csv --log-level=ERR --log=import --direct 
 
-#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_3_art_acqobj_ent.dump
+#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_final_art_acqobj_ent.dump
 
 
 #echo "Importing documents..."
 #bin/caUtils import-data --format=CSV  --mapping=document --source=03_Documents_edited.csv --log-level=ERR --log=import --direct 
 
-#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_3_art_acqobj_ent_doc.dump
+#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_final_art_acqobj_ent_doc.dump
 
-echo "Importing distributions..."
-bin/caUtils import-data --format=CSV  --mapping=DO01 --source=06_Distributions.csv --log-level=ERR --log=import --direct 
+#echo "Importing distributions..."
+#bin/caUtils import-data --format=CSV  --mapping=DO01 --source=06_Distributions.csv --log-level=ERR --log=import --direct 
 
-#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_3_art_acqobj_ent_doc_dist.dump
+#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_final_art_acqobj_ent_doc_dist.dump
 
-echo "Importing acquisitions..."
-bin/caUtils import-data --format=CSV  --mapping=acquisition --source=04_Acquisitions_Group.csv --log-level=ERR --log=import --direct 
+#echo "Importing acquisitions..."
+#bin/caUtils import-data --format=CSV  --mapping=acquisition --source=04_Acquisitions_Group.csv --log-level=ERR --log=import --direct 
 
 
-#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_3.dump
+#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_final.dump
 
-cd /data/kress/admin/support/scripts
-php fixItalics.php
+cd /data/kressfinal/support/scripts
+#php fixItalics.php
 php importMedia.php
 php importConditionMedia.php
 
 
-#cd /data/kress/admin/support/
-#bin/caUtils rebuild-search-index
+cd /data/kressfinal/support/
+#bin/caUtils apply-prepopulate-rules
 
-#mysqldump -uroot kress >  /data/kress/admin/support/backup_prototype_3_w_media.dump
+
+#mysqldump -uroot kress >  /data/kressfinal/support/backup_prototype_final_w_media.dump
 
 #Hand Edits:
 
@@ -53,4 +54,6 @@ php importConditionMedia.php
 #[DOC02352] Failed to add value for Doc_DateFilter; values were Doc_DateFilter = 1981-1969; 1965-1969
 
 #delete ACQ299 acquisition record
+
+bin/caUtils rebuild-search-index
 
