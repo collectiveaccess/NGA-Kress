@@ -1187,17 +1187,6 @@
       <typeRestrictions>
         <restriction code="r3">
           <table>ca_entities</table>
-          <type>artist</type>
-          <includeSubtypes>1</includeSubtypes>
-          <settings>
-            <setting name="minAttributesPerRow">0</setting>
-            <setting name="maxAttributesPerRow">1</setting>
-            <setting name="minimumAttributeBundlesToDisplay">1</setting>
-          </settings>
-        </restriction>
-        <restriction code="r4">
-          <table>ca_entities</table>
-          <type>other</type>
           <includeSubtypes>1</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
@@ -1222,18 +1211,29 @@
       <typeRestrictions>
         <restriction code="r3">
           <table>ca_entities</table>
-          <type>artist</type>
-          <includeSubtypes>1</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
-        <restriction code="r4">
+      </typeRestrictions>
+    </metadataElement>
+    <metadataElement code="Name_LifeDateFilter" datatype="DateRange">
+      <labels>
+        <label locale="en_US">
+          <name>Artist Life Dates</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">40</setting>
+        <setting name="fieldHeight">1</setting>
+        <setting name="minChars">0</setting>
+        <setting name="maxChars">65535</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="r3">
           <table>ca_entities</table>
-          <type>other</type>
-          <includeSubtypes>1</includeSubtypes>
           <settings>
             <setting name="minAttributesPerRow">0</setting>
             <setting name="maxAttributesPerRow">1</setting>
@@ -1256,10 +1256,23 @@
         <setting name="hideIfSelected_artist">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
         <setting name="hideIfSelected_artist">standard_entity_ui/entity_info/ca_attribute_Name_Location</setting>
         <setting name="hideIfSelected_artist">standard_entity_ui/entity_info/ca_attribute_Name_LocationFilter</setting>
+        <setting name="hideIfSelected_artist">standard_entity_ui/relationships/ca_occurrences</setting>
+        <setting name="hideIfSelected_artist">standard_entity_ui/relationships/ca_loans</setting>
+        <setting name="hideIfSelected_artist">standard_entity_ui/relationships/ca_movements</setting>
         <setting name="hideIfSelected_inst">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
         <setting name="hideIfSelected_inst">standard_entity_ui/entity_info/ca_attribute_Name_Nationality_filter</setting>
         <setting name="hideIfSelected_inst">standard_entity_ui/entity_info/ca_attribute_Name_BirthDateFilter</setting>
         <setting name="hideIfSelected_inst">standard_entity_ui/entity_info/ca_attribute_Name_DeathDateFilter</setting>
+        <setting name="hideIfSelected_inst">standard_entity_ui/relationships/ca_occurrences</setting>
+        <setting name="hideIfSelected_inst">standard_entity_ui/relationships/ca_movements</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Nationality_filter</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/relationships/ca_objects</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/relationships/ca_loans</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/relationships/ca_movements</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
@@ -1267,11 +1280,8 @@
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_BirthDateFilter</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_DeathDateFilter</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Nationality_filter</setting>
-        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionWeb</setting>
+        <setting name="hideIfSelected_seller">standard_entity_ui/relationships/ca_objects</setting>
+        <setting name="hideIfSelected_seller">standard_entity_ui/relationships/ca_loans</setting>
       </settings>
       <typeRestrictions>
         <restriction>
@@ -1287,7 +1297,7 @@
     <metadataElement code="Name_KressInstitutionType" datatype="List" list="Name_KressInstitutionType">
       <labels>
         <label locale="en_US">
-          <name>Sub-Category</name>
+          <name>Institution Type</name>
         </label>
       </labels>
       <typeRestrictions>
@@ -1361,7 +1371,7 @@
         <restriction>
           <table>ca_entities</table>
           <settings>
-            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">225</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -1413,7 +1423,7 @@
     <metadataElement code="Name_Nationality" datatype="Text">
       <labels>
         <label locale="en_US">
-          <name>Nationality</name>
+          <name>Artist Nationality</name>
         </label>
       </labels>
       <settings>
@@ -1451,8 +1461,8 @@
           <table>ca_entities</table>
           <includeSubtypes>1</includeSubtypes>
           <settings>
-            <setting name="minAttributesPerRow">1</setting>
-            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+            <setting name="maxAttributesPerRow">225</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -1858,7 +1868,7 @@
         <restriction>
           <table>ca_movements</table>
           <settings>
-            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="maxAttributesPerRow">225</setting>
             <setting name="minimumAttributeBundlesToDisplay">1</setting>
           </settings>
         </restriction>
@@ -2325,7 +2335,7 @@
               <settings>
                 <setting name="display_template"><![CDATA[]]></setting>
                 <setting name="list_format">list</setting>
-                <setting name="label" locale="en_US">Attribution</setting>
+                <setting name="label" locale="en_US">Historical Attribution</setting>
                 <setting name="restrict_to_relationship_types">attribution</setting>
                 <setting name="restrict_to_types">artist</setting>
                 <setting name="add_label" locale="en_US">Add attribution</setting>
@@ -2507,6 +2517,9 @@
                 <setting name="disableQuickadd">1</setting>
                 <setting name="label" locale="en_US">Related Art Objects</setting>
                 <setting name="add_label" locale="en_US">Add art object</setting>
+                <setting name="display_template"> <![CDATA[  <unit relativeTo="ca_objects"> 
+   ^ca_object_representations.media.icon <l>^ca_objects.Object_KressCatalogNumber <ifnotdef code="ca_objects.Object_KressCatalogNumber">^ca_objects.idno</ifnotdef></l>, <I>^ca_objects.preferred_labels</I>,  <unit relativeTo="ca_entities" restrictToRelationshipTypes="artist"> <l> ^ca_entities.preferred_labels.displayname</l> </unit>
+                  <unit relativeTo="ca_entities" restrictToRelationshipTypes="location"> ^ca_entities.preferred_labels.displayname</unit></unit>  ]]></setting>
                 <setting name="list_format">list</setting>
                  <setting name="sort"><![CDATA[Object_KressCatalogNumber]]></setting>
                 <setting name="sortDirection">ASC</setting>
@@ -2625,6 +2638,14 @@
             </label>
           </labels>
           <bundlePlacements>
+            <placement code="ca_attribute_Name_Type1">
+              <bundle>ca_entities.Name_Type</bundle>
+              <settings>
+                <setting name="readonly">1</setting>
+                <setting name="expand_collapse_value">collapse</setting>
+                <setting name="expand_collapse_no_value">collapse</setting>
+              </settings>
+            </placement>
             <placement code="ca_objects">
               <bundle>ca_objects</bundle>
               <settings>
@@ -3053,14 +3074,14 @@
         </screen>
       </screens>
     </userInterface>
-    <userInterface code="object_representations" type="ca_object_representations">
+    <userInterface code="standard_representation_ui" type="ca_object_representations">
       <labels>
         <label locale="en_US">
           <name>Movement Interstitial</name>
         </label>
       </labels>
       <screens>
-        <screen idno="general" default="0" color="000000">
+        <screen idno="screen_23_0" default="0" color="000000">
           <labels>
             <label locale="en_US">
               <name>general</name>
@@ -3073,14 +3094,21 @@
                 <setting name="label" locale="en_US">Identifier</setting>
               </settings>
             </placement>
-            <placement code="preferred_labels">
-              <bundle>preferred_labels</bundle>
+            <placement code="filename">
+              <bundle>original_filename</bundle>
               <settings>
-                <setting name="label" locale="en_US">File Name</setting>
+                <setting name="readonly">1</setting>
+                <setting name="label" locale="en_US">Original Filename</setting>
+                <setting name="expand_collapse_value">list</setting>
+                <setting name="expand_collapse_no_value">list</setting>
+                <setting name="usewysiwygeditor"/>
               </settings>
             </placement>
             <placement code="credit_line">
               <bundle>credit_line</bundle>
+            </placement>
+            <placement code="access4">
+              <bundle>access</bundle>
             </placement>
           </bundlePlacements>
         </screen>
@@ -3647,6 +3675,7 @@
           <settings>
             <setting name="label" locale="en_US">Institution</setting>
             <setting name="delimiter"><![CDATA[;]]></setting>
+            <setting name="format"><![CDATA[<l>^ca_entities.preferred_labels</l>]]></setting>
             <setting name="sort"><![CDATA[]]></setting>
             <setting name="show_hierarchy"><![CDATA[0]]></setting>
             <setting name="remove_first_items"><![CDATA[0]]></setting>
@@ -3856,6 +3885,7 @@
         </placement>
         <placement code="ca_entities_Name_InstitutionWeb">
           <bundle>ca_entities.Name_InstitutionWeb</bundle>
+          <settings><setting name="format"><![CDATA[^ca_entites.Name_InstitutionWeb]]></setting></settings>
         </placement>
         <placement code="ca_entities_Name_Location">
           <bundle>ca_entities.Name_Location</bundle>
