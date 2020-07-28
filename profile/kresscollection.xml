@@ -1273,6 +1273,8 @@
         <setting name="hideIfSelected_other">standard_entity_ui/relationships/ca_objects</setting>
         <setting name="hideIfSelected_other">standard_entity_ui/relationships/ca_loans</setting>
         <setting name="hideIfSelected_other">standard_entity_ui/relationships/ca_movements</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_Location</setting>
+        <setting name="hideIfSelected_other">standard_entity_ui/entity_info/ca_attribute_Name_LocationFilter</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_KressInstitutionType</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_InstitutionStatus</setting>
         <setting name="hideIfSelected_seller">standard_entity_ui/entity_info/ca_attribute_Name_Nationality</setting>
@@ -2390,6 +2392,9 @@
             <placement code="ca_attribute_Object_InternalNote">
               <bundle>ca_attribute_Object_InternalNote</bundle>
             </placement>
+            <placement code="access">
+              <bundle>access</bundle>
+            </placement>
           </bundlePlacements>
         </screen>
         <screen idno="identifier" default="0" typeRestrictions="art_object">
@@ -2629,6 +2634,9 @@
             <placement code="ca_attribute_Name_InternalNote">
               <bundle>ca_attribute_Name_InternalNote</bundle>
             </placement>
+            <placement code="access">
+              <bundle>access</bundle>
+            </placement>
           </bundlePlacements>
         </screen>
         <screen idno="relationships" default="0">
@@ -2779,6 +2787,9 @@
             <placement code="ca_attribute_Doc_Photographer">
               <bundle>ca_attribute_Doc_Photographer</bundle>
             </placement>
+            <placement code="access">
+              <bundle>access</bundle>
+            </placement>
           </bundlePlacements>
         </screen>
         <screen idno="relationships" default="0">
@@ -2905,7 +2916,9 @@
             <placement code="ca_attribute_Acquisition_InternalNote">
               <bundle>ca_attribute_Acquisition_InternalNote</bundle>
             </placement>
-            
+            <placement code="access">
+              <bundle>access</bundle>
+            </placement>
           </bundlePlacements>
         </screen>
         <screen idno="contents" default="0">
@@ -3004,6 +3017,9 @@
             </placement>
             <placement code="ca_attribute_Distribution_InternalNote">
               <bundle>ca_attribute_Distribution_InternalNote</bundle>
+            </placement>
+            <placement code="access">
+              <bundle>access</bundle>
             </placement>
           </bundlePlacements>
         </screen>
