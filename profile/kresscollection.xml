@@ -1007,6 +1007,27 @@
         </restriction>
       </typeRestrictions>
     </metadataElement>
+    <metadataElement code="Object_URLNGASysCat" datatype="Url">
+      <labels>
+        <label locale="en_US">
+          <name>National Gallery of Art Systematic Catalog or Online Edition</name>
+        </label>
+      </labels>
+      <settings>
+        <setting name="fieldWidth">80</setting>
+        <setting name="fieldHeight">1</setting>
+      </settings>
+      <typeRestrictions>
+        <restriction code="ca_objects">
+          <table>ca_objects</table>
+          <settings>
+            <setting name="minAttributesPerRow">0</setting>
+            <setting name="maxAttributesPerRow">1</setting>
+            <setting name="minimumAttributeBundlesToDisplay">1</setting>
+          </settings>
+        </restriction>
+      </typeRestrictions>
+    </metadataElement>
     <metadataElement code="Object_URLArtstor" datatype="Url">
       <labels>
         <label locale="en_US">
@@ -2454,6 +2475,9 @@
             </placement>
             <placement code="ca_attribute_Object_URLArtstor">
               <bundle>ca_attribute_Object_URLArtstor</bundle>
+            </placement>
+            <placement code="ca_attribute_Object_URLNGASysCat">
+              <bundle>ca_attribute_Object_URLNGASysCat</bundle>
             </placement>
           </bundlePlacements>
         </screen>
