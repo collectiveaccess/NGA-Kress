@@ -2575,7 +2575,7 @@
                 <setting name="list_format">bubbles</setting>
                 <setting name="sortDirection">DESC</setting>
                 <setting name="dontShowDeleteButton">0</setting>
-                <setting name="display_template"><![CDATA[^ca_object_representations.preferred_labels <br> ^ca_object_representations.credit_line]]></setting>
+                <setting name="display_template"><![CDATA[^ca_object_representations.original_filename <br> ^ca_object_representations.credit_line]]></setting>
                 <setting name="disableSorts">0</setting>
                 <setting name="numPerPage"/>
                 <setting name="uiStyle">NEW_UI</setting>
